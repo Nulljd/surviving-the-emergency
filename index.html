@@ -96,9 +96,9 @@ section{padding:92px 0}
 .legend span{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:var(--muted)}
 .legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
 
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px}.grid>.svc{flex:0 0 calc(25% - 17px);max-width:calc(25% - 17px)}
+@media(max-width:900px){.grid>.svc{flex-basis:calc(50% - 11px);max-width:calc(50% - 11px)}}
+@media(max-width:600px){.grid>.svc{flex-basis:100%;max-width:100%}}
 .svc{--svc:var(--blue);background:var(--card);border-radius:var(--r);padding:34px 32px;position:relative;transition:.24s cubic-bezier(.2,.7,.2,1);box-shadow:var(--shadow)}
 .svc:hover{transform:translateY(-6px);box-shadow:0 10px 22px rgba(20,30,40,.06),0 34px 64px -28px rgba(20,30,40,.28)}
 .svc-ico{width:58px;height:58px;border-radius:50%;background:color-mix(in srgb,var(--svc) 13%,transparent);display:grid;place-items:center;margin-bottom:20px}
