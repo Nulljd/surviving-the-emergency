@@ -281,6 +281,13 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
 .serve-tile h3{font-family:var(--display,Georgia,serif);font-weight:600;color:#14314C;font-size:1rem;margin:0;line-height:1.25}
 @media(max-width:860px){.serve-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
+<style>
+.clients-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:44px}
+.client-item{text-align:center;max-width:300px}
+.client-logo{max-height:76px;max-width:240px;width:auto;height:auto;display:block;margin:0 auto 12px}
+.client-cap b{display:block;font-family:var(--display,Georgia,serif);font-weight:600;color:#14314C;font-size:1.05rem;letter-spacing:.02em}
+.client-cap span{display:block;color:#5C6773;font-size:.82rem;line-height:1.4;margin-top:3px}
+</style>
 </head>
 <body>
 
@@ -305,7 +312,7 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
       <a href="#plans">Plans</a>
       <a href="#why">Why Us</a>
       <a href="about.html">About</a>
-      <a href="#clients" style="display:none">Clients</a>
+      <a href="#clients">Clients</a>
       <a href="#reviews">Reviews</a>
       <a href="#cta">Get a Quote</a>
     </nav>
@@ -518,29 +525,15 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
   </div>
 </section>
 
-<section class="marquee-sec" id="clients" style="display:none">
+<section class="marquee-sec" id="clients">
   <div class="marquee-head">
     <span class="eyebrow">Trusted By</span>
-    <h2>Teams we've worked with</h2>
+    <h2>Proud to partner with</h2>
   </div>
-  <div class="marquee">
-    <div class="marquee-track">
-      <div class="chip"><span class="dot"></span>Client One</div>
-      <div class="chip"><span class="dot"></span>Client Two</div>
-      <div class="chip"><span class="dot"></span>Client Three</div>
-      <div class="chip"><span class="dot"></span>Client Four</div>
-      <div class="chip"><span class="dot"></span>Client Five</div>
-      <div class="chip"><span class="dot"></span>Client Six</div>
-      <div class="chip"><span class="dot"></span>Client Seven</div>
-      <div class="chip"><span class="dot"></span>Client Eight</div>
-      <div class="chip" aria-hidden="true"><span class="dot"></span>Client One</div>
-      <div class="chip" aria-hidden="true"><span class="dot"></span>Client Two</div>
-      <div class="chip" aria-hidden="true"><span class="dot"></span>Client Three</div>
-      <div class="chip" aria-hidden="true"><span class="dot"></span>Client Four</div>
-      <div class="chip" aria-hidden="true"><span class="dot"></span>Client Five</div>
-      <div class="chip" aria-hidden="true"><span class="dot"></span>Client Six</div>
-      <div class="chip" aria-hidden="true"><span class="dot"></span>Client Seven</div>
-      <div class="chip" aria-hidden="true"><span class="dot"></span>Client Eight</div>
+  <div class="clients-row">
+    <div class="client-item">
+      <img src="images/apohco.png" alt="APOHCO — Accountable Pediatric Oral Health Care Organization" class="client-logo" onerror="this.style.display='none'">
+      <div class="client-cap"><b>APOHCO</b><span>Accountable Pediatric Oral Health Care Organization</span></div>
     </div>
   </div>
 </section>
