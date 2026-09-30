@@ -297,7 +297,7 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
 <style>
 .marquee-track.partners{animation-duration:20s}
 .partner{flex:0 0 100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:0 20px;box-sizing:border-box}
-.partner-logo{height:66px;width:auto;display:block}
+.partner-logo{max-height:78px;width:auto;height:auto;display:block}
 .partner-name{color:#5C6773;font-size:.98rem;font-weight:600}
 </style>
 <style>
@@ -306,6 +306,26 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
 .nav-cta{gap:14px}
 .nav-cta a{white-space:nowrap}
 .btn{white-space:nowrap}
+</style>
+<style>
+.creds{background:#ffffff;padding:56px 0}
+.creds-head{text-align:center;margin-bottom:32px}
+.creds-head h2,.faq-head h2{font-family:var(--display,Georgia,serif);font-weight:600;color:#14314C;font-size:1.9rem;margin:0}
+.creds-head p{color:#5C6773;max-width:600px;margin:.6em auto 0;font-size:1.03rem}
+.creds-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:48px}
+.cred{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;max-width:240px}
+.cred-logo{max-height:82px;max-width:200px;width:auto;height:auto;display:block}
+.cred-name{font-family:var(--display,Georgia,serif);font-weight:600;color:#14314C;font-size:1rem;line-height:1.3}
+.faq{background:#EFEBE1;padding:60px 0}
+.faq-head{text-align:center;margin-bottom:28px}
+.faq-list{max-width:770px;margin:0 auto}
+.faq-item{border-bottom:1px solid #d7d1c4}
+.faq-item summary{cursor:pointer;list-style:none;padding:18px 44px 18px 4px;position:relative;font-family:var(--display,Georgia,serif);font-weight:600;font-size:1.08rem;color:#14314C}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:1.5rem;line-height:1;color:#E24C3C;font-weight:400;transition:transform .2s}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-a{padding:0 6px 18px 4px;color:#243B52;line-height:1.65;font-size:1.02rem}
+.faq-a p{margin:0}
 </style>
 </head>
 <body>
@@ -541,14 +561,30 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
   </div>
 </section>
 
+<section class="creds" id="credentials">
+  <div class="wrap">
+    <div class="creds-head">
+      <h2>Nationally recognized training</h2>
+      <p>Our courses align with the organizations that set the standard for emergency care.</p>
+    </div>
+    <div class="creds-row">
+      <div class="cred"><img src="aha.png" alt="American Heart Association" class="cred-logo" onerror="this.style.display='none'"><span class="cred-name">American Heart Association</span></div>
+      <div class="cred"><img src="ashi.png" alt="ASHI — American Safety &amp; Health Institute" class="cred-logo" onerror="this.style.display='none'"><span class="cred-name">ASHI — American Safety &amp; Health Institute</span></div>
+      <div class="cred"><img src="stopthebleed.png" alt="Stop the Bleed" class="cred-logo" onerror="this.style.display='none'"><span class="cred-name">Stop the Bleed</span></div>
+    </div>
+  </div>
+</section>
+
 <section class="marquee-sec" id="clients">
   <div class="marquee-head">
     <h2>Proud to partner with</h2>
   </div>
   <div class="marquee">
     <div class="marquee-track partners">
-      <div class="partner"><img src="apohco.png" class="partner-logo" alt="APOHCO"><span class="partner-name">Accountable Pediatric Oral Health Care Organization</span></div>
-      <div class="partner" aria-hidden="true"><img src="apohco.png" class="partner-logo" alt="APOHCO"><span class="partner-name">Accountable Pediatric Oral Health Care Organization</span></div>
+      <div class="partner"><img src="apohco.png" class="partner-logo" alt="APOHCO"></div>
+      <div class="partner"><img src="metanoia.png" class="partner-logo" alt="Metanoia Center"></div>
+      <div class="partner" aria-hidden="true"><img src="apohco.png" class="partner-logo" alt="APOHCO"></div>
+      <div class="partner" aria-hidden="true"><img src="metanoia.png" class="partner-logo" alt="Metanoia Center"></div>
     </div>
   </div>
 </section>
@@ -576,6 +612,22 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
         <button id="rvSubmit" class="btn btn-blue">Post review</button>
         <span id="rvNote" class="rf-note">Reviews are approved before they appear on the site.</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-head"><h2>Frequently asked questions</h2></div>
+    <div class="faq-list">
+      <details class="faq-item"><summary>Do you come to us?</summary><div class="faq-a"><p>Yes — nearly all of our training is delivered onsite at your workplace, on your schedule, including evenings and weekends.</p></div></details>
+      <details class="faq-item"><summary>What areas do you serve?</summary><div class="faq-a"><p>The greater Cincinnati area and surrounding counties — Warren, Hamilton, Butler, and Clermont, and nearby. Farther out? Just ask; we're happy to travel.</p></div></details>
+      <details class="faq-item"><summary>How many people can you train at once?</summary><div class="faq-a"><p>Onsite sessions are built for groups up to 12, and we can scale up for larger teams — just let us know your headcount.</p></div></details>
+      <details class="faq-item"><summary>What does training cost?</summary><div class="faq-a"><p>Certification classes are priced per person; onsite courses like Bloodborne Pathogens, HIPAA, and Fire Extinguisher are a flat per-session rate. Every job gets a quick, tailored quote — no surprises.</p></div></details>
+      <details class="faq-item"><summary>Do your classes include certification cards?</summary><div class="faq-a"><p>CPR/AED, First Aid, and Stop the Bleed issue nationally recognized certification cards. Bloodborne Pathogens, HIPAA, and our workplace-readiness courses issue a certificate of completion.</p></div></details>
+      <details class="faq-item"><summary>Who do you align with?</summary><div class="faq-a"><p>We align with the American Heart Association, ASHI (American Safety &amp; Health Institute), and Stop the Bleed — the organizations that set the standard for emergency care.</p></div></details>
+      <details class="faq-item"><summary>What about our training records?</summary><div class="faq-a"><p>We provide a sign-in record and certificates at the time of training for you to keep on file, so your training holds up to OSHA and HIPAA requirements. Need copies later? We'll send them.</p></div></details>
+      <details class="faq-item"><summary>How do we book?</summary><div class="faq-a"><p>Hit “Request a Quote” at the top, or call or email us. We'll confirm what you need, lock in a date, and get your team ready.</p></div></details>
     </div>
   </div>
 </section>
