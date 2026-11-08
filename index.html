@@ -258,6 +258,53 @@ footer a{color:#B6B1A7}footer a:hover{color:#fff}
 .brand .mono-pulse path{stroke:var(--blue);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
 footer .mono{background:linear-gradient(125deg,#FF6E5E 0 46%,var(--blue-hi) 54% 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 footer .mono-pulse path{stroke:var(--blue-hi)}
+
+/* ---------- client portal add-on ---------- */
+.portal-sec{padding:96px 0}
+.portal-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:center}
+@media(max-width:940px){.portal-grid{grid-template-columns:1fr;gap:40px}}
+.portal-sec .eyebrow{color:var(--red-deep)}
+.portal-sec h2{font-size:clamp(2.1rem,4.4vw,3.05rem);margin-top:12px}
+.portal-sec .lead{color:var(--muted);font-size:1.08rem;margin:16px 0 22px}
+.pf{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:13px}
+.pf li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;line-height:1.45}
+.pf li .ic{width:30px;height:30px;border-radius:50%;background:color-mix(in srgb,var(--blue) 13%,transparent);display:grid;place-items:center;flex:none}
+.pf li .ic svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:2.2}
+.pf li b{font-weight:700}
+.pf li span{color:var(--muted)}
+.addon-note{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;font-size:.9rem;line-height:1.45;margin-bottom:24px;box-shadow:var(--shadow)}
+.addon-note svg{width:20px;height:20px;stroke:var(--red);fill:none;stroke-width:2;flex:none;margin-top:1px}
+.addon-note b{display:block;font-size:.95rem}
+.addon-note span{color:var(--muted)}
+.portal-btns{display:flex;gap:12px;flex-wrap:wrap}
+.portal-btns .btn-ghost{color:var(--text)}
+/* mock dashboard */
+.mock{background:linear-gradient(160deg,var(--navy),var(--navy-2));border-radius:30px;padding:16px;box-shadow:0 30px 70px -30px rgba(15,39,64,.55);position:relative}
+.mock::before{content:"";position:absolute;inset:0;border-radius:30px;background:radial-gradient(70% 60% at 90% 0%,rgba(111,178,236,.28),transparent 60%);pointer-events:none}
+.mock-bar{display:flex;align-items:center;gap:6px;padding:4px 6px 12px;position:relative}
+.mock-bar i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22)}
+.mock-bar span{margin-left:10px;font-size:.72rem;color:#AFC3D8;background:rgba(255,255,255,.08);padding:4px 12px;border-radius:999px}
+.mock-body{background:#F6F3EC;border-radius:20px;padding:20px;color:#1C2530;position:relative}
+.mock-body h4{margin:0;font-family:var(--display);font-size:1.18rem;font-weight:600}
+.mock-body .mb-sub{font-size:.78rem;color:#5C6773;margin:2px 0 14px}
+.mstats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.mstat{background:#fff;border-radius:14px;padding:11px 12px;box-shadow:0 2px 8px rgba(20,30,40,.05)}
+.mstat b{font-family:var(--display);font-size:1.55rem;line-height:1;display:block}
+.mstat small{font-size:.7rem;color:#5C6773;line-height:1.25;display:block;margin-top:4px}
+.mstat.x b{color:#BE3626}.mstat.d b{color:#B7791F}.mstat.c b{color:#1F7A4D}
+.mlist{background:#fff;border-radius:14px;padding:6px 12px;box-shadow:0 2px 8px rgba(20,30,40,.05)}
+.mlist .mh{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5C6773;padding:6px 0 4px}
+.mrow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid rgba(28,37,48,.08);font-size:.8rem}
+.mrow:first-of-type{border-top:0}
+.mrow em{font-style:normal;color:#5C6773;font-size:.74rem;display:block}
+.pill{font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.pill.x{background:#FBE4E1;color:#BE3626}.pill.d{background:#FBF0D9;color:#8A5A12}.pill.c{background:#DFF2E7;color:#1F7A4D}
+.mfoot{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.mfoot div{background:#fff;border-radius:14px;padding:10px 12px;font-size:.74rem;line-height:1.35;box-shadow:0 2px 8px rgba(20,30,40,.05)}
+.mfoot b{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:#5C6773;margin-bottom:3px}
+.mock-cap{text-align:center;font-size:.8rem;color:var(--muted);margin-top:12px}
+.plans-note{text-align:center;color:var(--muted);font-size:.98rem;margin:30px auto 0;max-width:720px}
+.plans-note a{color:var(--blue);font-weight:600}
 </style>
 <style>
 .action-sec{background:#EFEBE1;padding:58px 0}
@@ -562,6 +609,55 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
       </div>
 
     </div>
+    <p class="plans-note">Every service is available on its own or bundled into a package. Want your records, certifications, and renewals online? Add the <a href="#portal">Client Portal</a> to any option.</p>
+  </div>
+</section>
+
+<section class="portal-sec" id="portal">
+  <div class="wrap portal-grid">
+    <div>
+      <span class="eyebrow">Add-on service · Client Portal</span>
+      <h2>Every record and renewal, one login away</h2>
+      <p class="lead">Your own secure STE client portal keeps your training records, certifications, and renewals in one place, so you're never digging through binders when an inspector, auditor, or insurer asks.</p>
+      <ul class="pf">
+        <li><span class="ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span><div><b>Records on demand.</b> <span>Search and download sign-in sheets, certificates, cards, and your Emergency Action Plan any time.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Expiration tracking + reminders.</b> <span>See every employee's certifications at a glance, with automatic emails at 90, 60, and 30 days.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span><div><b>Scheduling &amp; invoices.</b> <span>Request training, see confirmed dates, and view or pay invoices in the same place.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="m10 8 4 2-4 2z"/><path d="M8 20h8"/></svg></span><div><b>Self-paced online courses.</b> <span>Assign courses like Bloodborne Pathogens and HIPAA; employees take the quiz and get a certificate automatically.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><b>One-click Excel reports.</b> <span>Rosters, expirations, and training history ready for audits and insurance.</span></div></li>
+      </ul>
+      <div class="addon-note"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><div><b>Add it to any plan, or get it on its own.</b><span>The Client Portal is an optional service, billed separately. Pair it with a class or annual package, or use it to manage the records you already have.</span></div></div>
+      <div class="portal-btns">
+        <a href="#cta" class="btn btn-blue" data-plan="Client Portal: live demo">See a live demo</a>
+        <a href="#cta" class="btn btn-ghost" data-plan="Client Portal &amp; Records Management">Ask about pricing</a>
+      </div>
+    </div>
+    <div>
+      <div class="mock" aria-label="Example of the client portal dashboard">
+        <div class="mock-bar"><i></i><i></i><i></i><span>portal.survivingtheemergency.com</span></div>
+        <div class="mock-body">
+          <h4>Welcome back</h4>
+          <div class="mb-sub">Here's where your team stands today.</div>
+          <div class="mstats">
+            <div class="mstat x"><b>2</b><small>Expired certifications</small></div>
+            <div class="mstat d"><b>4</b><small>Due within 90 days</small></div>
+            <div class="mstat c"><b>10</b><small>Current certifications</small></div>
+          </div>
+          <div class="mlist">
+            <div class="mh">Needs attention</div>
+            <div class="mrow"><div>Employee A<em>Bloodborne Pathogens</em></div><span class="pill x">Expired</span></div>
+            <div class="mrow"><div>Employee B<em>CPR/AED &amp; First Aid</em></div><span class="pill x">Expired</span></div>
+            <div class="mrow"><div>Employee C<em>HIPAA</em></div><span class="pill d">20 days</span></div>
+            <div class="mrow"><div>Employee D<em>CPR/AED &amp; First Aid</em></div><span class="pill d">45 days</span></div>
+          </div>
+          <div class="mfoot">
+            <div><b>Upcoming training</b>CPR/AED &amp; First Aid renewal · Main office</div>
+            <div><b>Invoices</b>1 open · View &amp; pay online</div>
+          </div>
+        </div>
+      </div>
+      <div class="mock-cap">Sample dashboard. Ask us for a live walkthrough.</div>
+    </div>
   </div>
 </section>
 
@@ -652,7 +748,7 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
       <details class="faq-item"><summary>What does training cost?</summary><div class="faq-a"><p>Certification classes are priced per person; onsite courses like Bloodborne Pathogens, HIPAA, and Fire Extinguisher are a flat per-session rate. Every job gets a quick, tailored quote — no surprises.</p></div></details>
       <details class="faq-item"><summary>Do your classes include certification cards?</summary><div class="faq-a"><p>CPR/AED, First Aid, and Stop the Bleed issue nationally recognized certification cards. Bloodborne Pathogens, HIPAA, and our workplace-readiness courses issue a certificate of completion.</p></div></details>
       <details class="faq-item"><summary>Whose courses do you teach?</summary><div class="faq-a"><p>Our instructors are certified to teach American Heart Association, ASHI (American Safety &amp; Health Institute), and Stop the Bleed courses. Students in those courses receive the official course completion card from that organization.</p></div></details>
-      <details class="faq-item"><summary>What about our training records?</summary><div class="faq-a"><p>We provide a sign-in record and certificates at the time of training for you to keep on file, so your training holds up to OSHA and HIPAA requirements. Need copies later? We'll send them.</p></div></details>
+      <details class="faq-item"><summary>What about our training records?</summary><div class="faq-a"><p>We provide a sign-in record and certificates at the time of training for you to keep on file, so your training holds up to OSHA and HIPAA requirements. Need copies later? We'll send them. Want them online? Our optional <a href="#portal" style="color:var(--blue);font-weight:600">Client Portal</a> keeps every record, certification, and renewal date in one secure login, with automatic reminders before anything expires.</p></div></details>
       <details class="faq-item"><summary>How do we book?</summary><div class="faq-a"><p>Hit “Request a Quote” at the top, or call or email us. We'll confirm what you need, lock in a date, and get your team ready.</p></div></details>
     </div>
   </div>
@@ -686,6 +782,8 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
         <option>Emergency Action Plan</option>
         <option>EAP — Annual</option>
         <option>All-Inclusive — Annual</option>
+        <option>Client Portal &amp; Records Management</option>
+        <option>Client Portal: live demo</option>
       </select></div>
       <div class="fld"><label>Message (optional)</label><textarea id="qMsg" rows="3" placeholder="Tell us what you need"></textarea></div>
       <button class="btn btn-blue" id="qSend">Send Request</button>
@@ -923,6 +1021,9 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
     window.location.href='mailto:survivingtheemergency@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
   });
 })();
+</script>
+<script>
+document.querySelectorAll('[data-plan]').forEach(function(a){a.addEventListener('click',function(){var sel=document.getElementById('qPlan');if(sel){sel.value=a.getAttribute('data-plan').replace('&amp;','&');}});});
 </script>
 </body>
 </html>
