@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Instructor Portal — Surviving the Emergency</title>
+<meta name="description" content="The Surviving the Emergency instructor portal is coming soon: schedules, class assignments, rosters, and course materials in one place.">
+<link rel="canonical" href="https://www.survivingtheemergency.com/instructor-portal.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Surviving the Emergency">
+<meta property="og:title" content="Instructor Portal — Surviving the Emergency">
+<meta property="og:description" content="The Surviving the Emergency instructor portal is coming soon: schedules, class assignments, rosters, and course materials in one place.">
+<meta property="og:url" content="https://www.survivingtheemergency.com/instructor-portal.html">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -96,9 +104,9 @@ section{padding:92px 0}
 .legend span{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:var(--muted)}
 .legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
 
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px}.grid>.svc{flex:0 0 calc(25% - 17px);max-width:calc(25% - 17px)}
+@media(max-width:900px){.grid>.svc{flex-basis:calc(50% - 11px);max-width:calc(50% - 11px)}}
+@media(max-width:600px){.grid>.svc{flex-basis:100%;max-width:100%}}
 .svc{--svc:var(--blue);background:var(--card);border-radius:var(--r);padding:34px 32px;position:relative;transition:.24s cubic-bezier(.2,.7,.2,1);box-shadow:var(--shadow)}
 .svc:hover{transform:translateY(-6px);box-shadow:0 10px 22px rgba(20,30,40,.06),0 34px 64px -28px rgba(20,30,40,.28)}
 .svc-ico{width:58px;height:58px;border-radius:50%;background:color-mix(in srgb,var(--svc) 13%,transparent);display:grid;place-items:center;margin-bottom:20px}
@@ -258,16 +266,53 @@ footer a{color:#B6B1A7}footer a:hover{color:#fff}
 .brand .mono-pulse path{stroke:var(--blue);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
 footer .mono{background:linear-gradient(125deg,#FF6E5E 0 46%,var(--blue-hi) 54% 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 footer .mono-pulse path{stroke:var(--blue-hi)}
-</style>
-<style>
-.action-sec{background:#EFEBE1;padding:58px 0}
-.action-sec .marquee-head{text-align:center;margin-bottom:28px}
-.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.action-item{margin:0;border-radius:12px;overflow:hidden;background:#dcd7cb;box-shadow:0 6px 18px rgba(20,49,76,.12)}
-.action-item img{display:block;width:100%;height:220px;object-fit:cover}
-.action-item figcaption{padding:10px 14px;font-family:var(--body,system-ui);font-size:.85rem;font-weight:600;color:#14314C;background:#fff}
-@media(max-width:820px){.action-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.action-grid{grid-template-columns:1fr}}
+
+/* ---------- client portal add-on ---------- */
+.portal-sec{padding:96px 0}
+.portal-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:center}
+@media(max-width:940px){.portal-grid{grid-template-columns:1fr;gap:40px}}
+.portal-sec .eyebrow{color:var(--red-deep)}
+.portal-sec h2{font-size:clamp(2.1rem,4.4vw,3.05rem);margin-top:12px}
+.portal-sec .lead{color:var(--muted);font-size:1.08rem;margin:16px 0 22px}
+.pf{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:13px}
+.pf li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;line-height:1.45}
+.pf li .ic{width:30px;height:30px;border-radius:50%;background:color-mix(in srgb,var(--blue) 13%,transparent);display:grid;place-items:center;flex:none}
+.pf li .ic svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:2.2}
+.pf li b{font-weight:700}
+.pf li span{color:var(--muted)}
+.addon-note{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;font-size:.9rem;line-height:1.45;margin-bottom:24px;box-shadow:var(--shadow)}
+.addon-note svg{width:20px;height:20px;stroke:var(--red);fill:none;stroke-width:2;flex:none;margin-top:1px}
+.addon-note b{display:block;font-size:.95rem}
+.addon-note span{color:var(--muted)}
+.portal-btns{display:flex;gap:12px;flex-wrap:wrap}
+.portal-btns .btn-ghost{color:var(--text)}
+/* mock dashboard */
+.mock{background:linear-gradient(160deg,var(--navy),var(--navy-2));border-radius:30px;padding:16px;box-shadow:0 30px 70px -30px rgba(15,39,64,.55);position:relative}
+.mock::before{content:"";position:absolute;inset:0;border-radius:30px;background:radial-gradient(70% 60% at 90% 0%,rgba(111,178,236,.28),transparent 60%);pointer-events:none}
+.mock-bar{display:flex;align-items:center;gap:6px;padding:4px 6px 12px;position:relative}
+.mock-bar i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22)}
+.mock-bar span{margin-left:10px;font-size:.72rem;color:#AFC3D8;background:rgba(255,255,255,.08);padding:4px 12px;border-radius:999px}
+.mock-body{background:#F6F3EC;border-radius:20px;padding:20px;color:#1C2530;position:relative}
+.mock-body h4{margin:0;font-family:var(--display);font-size:1.18rem;font-weight:600}
+.mock-body .mb-sub{font-size:.78rem;color:#5C6773;margin:2px 0 14px}
+.mstats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.mstat{background:#fff;border-radius:14px;padding:11px 12px;box-shadow:0 2px 8px rgba(20,30,40,.05)}
+.mstat b{font-family:var(--display);font-size:1.55rem;line-height:1;display:block}
+.mstat small{font-size:.7rem;color:#5C6773;line-height:1.25;display:block;margin-top:4px}
+.mstat.x b{color:#BE3626}.mstat.d b{color:#B7791F}.mstat.c b{color:#1F7A4D}
+.mlist{background:#fff;border-radius:14px;padding:6px 12px;box-shadow:0 2px 8px rgba(20,30,40,.05)}
+.mlist .mh{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5C6773;padding:6px 0 4px}
+.mrow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid rgba(28,37,48,.08);font-size:.8rem}
+.mrow:first-of-type{border-top:0}
+.mrow em{font-style:normal;color:#5C6773;font-size:.74rem;display:block}
+.pill{font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.pill.x{background:#FBE4E1;color:#BE3626}.pill.d{background:#FBF0D9;color:#8A5A12}.pill.c{background:#DFF2E7;color:#1F7A4D}
+.mfoot{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.mfoot div{background:#fff;border-radius:14px;padding:10px 12px;font-size:.74rem;line-height:1.35;box-shadow:0 2px 8px rgba(20,30,40,.05)}
+.mfoot b{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:#5C6773;margin-bottom:3px}
+.mock-cap{text-align:center;font-size:.8rem;color:var(--muted);margin-top:12px}
+.plans-note{text-align:center;color:var(--muted);font-size:.98rem;margin:30px auto 0;max-width:720px}
+.plans-note a{color:var(--blue);font-weight:600}
 </style>
 <style>
 .portal-hero{background:#14314C;color:#fff;padding:88px 0;text-align:center}
@@ -279,7 +324,46 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
 .portal-list li{position:relative;padding-left:30px;color:#e7e2d8;font-size:1.04rem;line-height:1.5}
 .portal-list li:before{content:"";position:absolute;left:0;top:.4em;width:13px;height:13px;border-radius:3px;background:linear-gradient(135deg,#E24C3C 0 50%,#1F62A8 50% 100%)}
 .portal-cta p{color:#cfc9be;margin-bottom:1.1em}
-.portal-back{display:inline-block;margin-top:20px;color:#6FB2EC;font-weight:600;font-size:.95rem}
+.portal-back{display:inline-block;margin-top:20px;padding:10px 0;color:#6FB2EC;font-weight:600;font-size:.95rem}
+</style>
+<style>
+/* ---------- Fixes from browser test (Nov 2026) ---------- */
+/* hero + feature row: restore side margins, line the hero up with the rest of the page */
+.hero-in{max-width:1180px;padding-left:24px;padding-right:24px}
+.hero h1{max-width:800px}
+.stats-in{padding-left:24px;padding-right:24px}
+/* mobile menu */
+.nav-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1.5px solid var(--line);border-radius:14px;background:transparent;color:var(--text);cursor:pointer}
+.nav-toggle svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.nav-toggle .x{display:none}
+header.nav.open .nav-toggle .bars{display:none}
+header.nav.open .nav-toggle .x{display:block}
+.nav-links .m-only{display:none}
+@media(max-width:860px){
+  .nav-toggle{display:inline-flex}
+  header.nav.open{background:var(--bg)}
+  header.nav.open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px 24px 18px;background:var(--bg);box-shadow:0 18px 30px -18px rgba(0,0,0,.35)}
+  header.nav.open .nav-links a{padding:14px 0;font-size:1.05rem;color:var(--text);border-bottom:1px solid var(--line)}
+  header.nav.open .nav-links .m-only{display:block;border-bottom:0;color:var(--blue);font-weight:700}
+  /* larger tap targets */
+  .util-in{height:46px}
+  .util a{padding:13px 0}
+  footer ul{gap:0}
+  footer li a{display:inline-block;padding:8px 0}
+  footer li{padding:2px 0}
+  .foot-bottom a{display:inline-block;padding:12px 0}
+  .gr-link{display:inline-block;padding:10px 0}
+  .cinfo li a{display:inline-block;padding:9px 0}
+  .plans-note a,.faq-a a{display:inline-block;padding:4px 0}
+}
+@media(max-width:600px){
+  /* logo fits the header: one line, tagline hidden, quote button moves into the menu */
+  .brand{gap:9px;min-width:0}
+  .brand-txt{font-size:.95rem;white-space:nowrap}
+  .brand-txt small{display:none}
+  .nav-cta .btn{display:none}
+}
+@media(max-width:360px){.brand-txt{font-size:.86rem}.brand .mono{font-size:25px}.brand .mono-pulse{width:38px}}
 </style>
 </head>
 <body>
@@ -289,8 +373,6 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
     <a href="https://buy.stripe.com/5kQfZh7EW2ey0Sk8R1a7C02"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Pay an Invoice</a>
     <span class="sep">·</span>
     <a href="https://portal.survivingtheemergency.com/login"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Client Login</a>
-    <span class="sep">·</span>
-    <a href="instructor-portal.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Instructor Login</a>
   </div>
 </div>
 
@@ -300,17 +382,18 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
       <span class="mono-wrap"><span class="mono">StE</span><svg class="mono-pulse" viewBox="0 0 118 18" xmlns="http://www.w3.org/2000/svg"><path d="M2 9 H44 l5 -7 6 14 5 -7 H116"/></svg></span>
       <span class="brand-txt">Surviving the Emergency<svg class="flame" viewBox="0 0 24 28" aria-hidden="true"><path fill="#E24C3C" d="M12 26C1.29 18.8 3.01 9.2 10.96 2 14.42 6.8 22.37 8.72 20.64 17.84 19.6 23.12 16.15 26 12 26Z"/><path fill="#F2A93C" d="M12.52 22.64C7.51 18.32 8.54 13.04 12.35 10.64 15.8 13.04 16.49 17.84 13.73 20.72 13.21 21.92 12.86 22.4 12.52 22.64Z"/></svg><small>Workplace Safety Training &amp; Consulting</small></span>
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="index.html#services">Services</a>
       <a href="index.html#plans">Plans</a>
+      <a href="index.html#portal">Client Portal</a>
       <a href="index.html#why">Why Us</a>
       <a href="about.html">About</a>
-      <a href="index.html#clients" style="display:none">Clients</a>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#cta">Get a Quote</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#cta" class="m-only">Request a Quote</a>
     </nav>
     <div class="nav-cta">
       <a href="index.html#cta" class="btn btn-blue">Request a Quote</a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     </div>
   </div>
 </header>
@@ -365,11 +448,21 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Surviving the Emergency LLC. All rights reserved.</span>
-      <span>Training &amp; emergency planning</span>
+      <span><a href="https://portal.survivingtheemergency.com/login">Client Login</a> · <a href="instructor-portal.html" target="_blank" rel="noopener">Instructor Login</a></span>
     </div>
   </div>
 </footer>
 
-
+<script>
+(function(){
+  var nav=document.getElementById('nav'),btn=document.getElementById('navToggle');
+  if(!nav||!btn)return;
+  function set(open){nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
+  btn.addEventListener('click',function(){set(!nav.classList.contains('open'));});
+  document.querySelectorAll('#navLinks a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>860)set(false);});
+})();
+</script>
 </body>
 </html>

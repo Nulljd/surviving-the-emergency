@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Surviving the Emergency — Workplace Safety Training &amp; Consulting</title>
+<meta name="description" content="Onsite workplace safety training and emergency action planning for Greater Cincinnati employers, taught by active fire and EMS professionals. CPR/AED, first aid, Stop the Bleed, bloodborne pathogens, HIPAA, and fire extinguisher training.">
+<link rel="canonical" href="https://www.survivingtheemergency.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Surviving the Emergency">
+<meta property="og:title" content="Surviving the Emergency — Workplace Safety Training &amp; Consulting">
+<meta property="og:description" content="Training for the minutes before EMS arrives. Onsite CPR, first aid, fire, and compliance training plus emergency action planning, led by active fire and EMS professionals.">
+<meta property="og:url" content="https://www.survivingtheemergency.com/">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -411,6 +419,45 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
 @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
 </style>
+<style>
+/* ---------- Fixes from browser test (Nov 2026) ---------- */
+/* hero + feature row: restore side margins, line the hero up with the rest of the page */
+.hero-in{max-width:1180px;padding-left:24px;padding-right:24px}
+.hero h1{max-width:800px}
+.stats-in{padding-left:24px;padding-right:24px}
+/* mobile menu */
+.nav-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1.5px solid var(--line);border-radius:14px;background:transparent;color:var(--text);cursor:pointer}
+.nav-toggle svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.nav-toggle .x{display:none}
+header.nav.open .nav-toggle .bars{display:none}
+header.nav.open .nav-toggle .x{display:block}
+.nav-links .m-only{display:none}
+@media(max-width:860px){
+  .nav-toggle{display:inline-flex}
+  header.nav.open{background:var(--bg)}
+  header.nav.open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px 24px 18px;background:var(--bg);box-shadow:0 18px 30px -18px rgba(0,0,0,.35)}
+  header.nav.open .nav-links a{padding:14px 0;font-size:1.05rem;color:var(--text);border-bottom:1px solid var(--line)}
+  header.nav.open .nav-links .m-only{display:block;border-bottom:0;color:var(--blue);font-weight:700}
+  /* larger tap targets */
+  .util-in{height:46px}
+  .util a{padding:13px 0}
+  footer ul{gap:0}
+  footer li a{display:inline-block;padding:8px 0}
+  footer li{padding:2px 0}
+  .foot-bottom a{display:inline-block;padding:12px 0}
+  .gr-link{display:inline-block;padding:10px 0}
+  .cinfo li a{display:inline-block;padding:9px 0}
+  .plans-note a,.faq-a a{display:inline-block;padding:4px 0}
+}
+@media(max-width:600px){
+  /* logo fits the header: one line, tagline hidden, quote button moves into the menu */
+  .brand{gap:9px;min-width:0}
+  .brand-txt{font-size:.95rem;white-space:nowrap}
+  .brand-txt small{display:none}
+  .nav-cta .btn{display:none}
+}
+@media(max-width:360px){.brand-txt{font-size:.86rem}.brand .mono{font-size:25px}.brand .mono-pulse{width:38px}}
+</style>
 </head>
 <body>
 
@@ -428,16 +475,18 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
       <span class="mono-wrap"><span class="mono">StE</span><svg class="mono-pulse" viewBox="0 0 118 18" xmlns="http://www.w3.org/2000/svg"><path d="M2 9 H44 l5 -7 6 14 5 -7 H116"/></svg></span>
       <span class="brand-txt">Surviving the Emergency<svg class="flame" viewBox="0 0 24 28" aria-hidden="true"><path fill="#E24C3C" d="M12 26C1.29 18.8 3.01 9.2 10.96 2 14.42 6.8 22.37 8.72 20.64 17.84 19.6 23.12 16.15 26 12 26Z"/><path fill="#F2A93C" d="M12.52 22.64C7.51 18.32 8.54 13.04 12.35 10.64 15.8 13.04 16.49 17.84 13.73 20.72 13.21 21.92 12.86 22.4 12.52 22.64Z"/></svg><small>Workplace Safety Training &amp; Consulting</small></span>
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="#services">Services</a>
       <a href="#plans">Plans</a>
       <a href="#portal">Client Portal</a>
       <a href="#why">Why Us</a>
       <a href="about.html">About</a>
       <a href="#faq">FAQ</a>
+      <a href="#cta" class="m-only">Request a Quote</a>
     </nav>
     <div class="nav-cta">
       <a href="#cta" class="btn btn-blue">Request a Quote</a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     </div>
   </div>
 </header>
@@ -457,10 +506,10 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
 
 <section class="stats" style="padding:0">
   <div class="wrap stats-in">
-    <div class="stat"><span class="ib"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span><div><b>Onsite at Your Facility</b><span>We come to your team — one site or many</span></div></div>
-    <div class="stat"><span class="ib"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Fire &amp; EMS Instructors</b><span>Taught by active emergency professionals</span></div></div>
-    <div class="stat"><span class="ib"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><div><b>OSHA-Focused</b><span>Curriculum built around compliance</span></div></div>
-    <div class="stat"><span class="ib"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Flexible Scheduling</b><span>Fast quotes and dates that fit your shifts</span></div></div>
+    <div class="stat"><span class="ib"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span><div><b>Onsite at Your Facility</b><span>We come to your team — one site or many</span></div></div>
+    <div class="stat"><span class="ib"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Fire &amp; EMS Instructors</b><span>Taught by active emergency professionals</span></div></div>
+    <div class="stat"><span class="ib"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><div><b>OSHA-Focused</b><span>Curriculum built around compliance</span></div></div>
+    <div class="stat"><span class="ib"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Flexible Scheduling</b><span>Fast quotes and dates that fit your shifts</span></div></div>
   </div>
 </section>
 
@@ -690,10 +739,10 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
       <a href="#cta" class="btn btn-blue" style="margin-top:26px">Speak With Us</a>
     </div>
     <ul>
-      <li class="fire"><span class="ib"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/></svg></span><div><b>Real Emergency Experience</b><span>Instruction grounded in real fire, EMS, and rescue response — the first-five-minutes reality before help arrives.</span></div></li>
-      <li><span class="ib"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-5h4v5"/></svg></span><div><b>Onsite, at Your Workplace</b><span>We deliver training and drills in your space, on your schedule — single-site or across every location.</span></div></li>
-      <li><span class="ib"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><div><b>Compliance-Focused</b><span>OSHA-aligned curriculum, plus consultant guidance to meet your own and any third-party or client compliance requirements — with documentation that holds up to an audit.</span></div></li>
-      <li class="fire"><span class="ib"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 4 6 9a6 6 0 0 1-12 0c0-2 1-3 1-3s0 2 2 2c0-3 3-5 3-5s-2 3 0 5"/></svg></span><div><b>Local &amp; Responsive</b><span>Rooted in the greater Cincinnati area and surrounding counties, with fast quotes and scheduling that fits your operation.</span></div></li>
+      <li class="fire"><span class="ib"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/></svg></span><div><b>Real Emergency Experience</b><span>Instruction grounded in real fire, EMS, and rescue response — the first-five-minutes reality before help arrives.</span></div></li>
+      <li><span class="ib"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-5h4v5"/></svg></span><div><b>Onsite, at Your Workplace</b><span>We deliver training and drills in your space, on your schedule — single-site or across every location.</span></div></li>
+      <li><span class="ib"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><div><b>Compliance-Focused</b><span>OSHA-aligned curriculum, plus consultant guidance to meet your own and any third-party or client compliance requirements — with documentation that holds up to an audit.</span></div></li>
+      <li class="fire"><span class="ib"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 4 6 9a6 6 0 0 1-12 0c0-2 1-3 1-3s0 2 2 2c0-3 3-5 3-5s-2 3 0 5"/></svg></span><div><b>Local &amp; Responsive</b><span>Rooted in the greater Cincinnati area and surrounding counties, with fast quotes and scheduling that fits your operation.</span></div></li>
     </ul>
   </div>
 </section>
@@ -788,15 +837,15 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
     </div>
     <div class="form-card">
       <div class="frow2">
-        <div class="fld"><label>Name</label><input id="qName" type="text" placeholder="Your name"></div>
-        <div class="fld"><label>Business / organization</label><input id="qBiz" type="text" placeholder="Company"></div>
+        <div class="fld"><label for="qName">Name</label><input id="qName" type="text" placeholder="Your name"></div>
+        <div class="fld"><label for="qBiz">Business / organization</label><input id="qBiz" type="text" placeholder="Company"></div>
       </div>
-      <div class="fld"><label>Email</label><input id="qEmail" type="email" placeholder="you@company.com"></div>
+      <div class="fld"><label for="qEmail">Email</label><input id="qEmail" type="email" placeholder="you@company.com"></div>
       <div class="frow2">
-        <div class="fld"><label>Phone (optional)</label><input id="qPhone" type="tel" placeholder="(   )   -"></div>
-        <div class="fld"><label># of locations (optional)</label><input id="qLoc" type="number" min="1" placeholder="1"></div>
+        <div class="fld"><label for="qPhone">Phone (optional)</label><input id="qPhone" type="tel" placeholder="(   )   -"></div>
+        <div class="fld"><label for="qLoc"># of locations (optional)</label><input id="qLoc" type="number" min="1" placeholder="1"></div>
       </div>
-      <div class="fld"><label>Interested in</label><select id="qPlan">
+      <div class="fld"><label for="qPlan">Interested in</label><select id="qPlan">
         <option>Not sure yet</option>
         <option>Single classes</option>
         <option>Emergency Action Plan</option>
@@ -805,7 +854,7 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
         <option>Client Portal &amp; Records Management</option>
         <option>Client Portal: live demo</option>
       </select></div>
-      <div class="fld"><label>Message (optional)</label><textarea id="qMsg" rows="3" placeholder="Tell us what you need"></textarea></div>
+      <div class="fld"><label for="qMsg">Message (optional)</label><textarea id="qMsg" rows="3" placeholder="Tell us what you need"></textarea></div>
       <button class="btn btn-blue" id="qSend">Send Request</button>
       <div class="form-note" id="qNote">This opens your email app to send us the details.</div>
     </div>
@@ -1040,6 +1089,17 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
     note.textContent='Opening your email app to send…';note.className='form-note';
     window.location.href='mailto:survivingtheemergency@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
   });
+})();
+</script>
+<script>
+(function(){
+  var nav=document.getElementById('nav'),btn=document.getElementById('navToggle');
+  if(!nav||!btn)return;
+  function set(open){nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
+  btn.addEventListener('click',function(){set(!nav.classList.contains('open'));});
+  document.querySelectorAll('#navLinks a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>860)set(false);});
 })();
 </script>
 <script>
