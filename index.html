@@ -395,6 +395,22 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
 .creds-member{text-align:center;margin:30px auto 0;color:#5C6773;font-size:1rem}
 .creds-member strong{color:#14314C;font-weight:700}
 </style>
+<style>
+/* ---------- Our Approach: four-step strip (added Nov 2026) ---------- */
+.approach-in{max-width:1080px}
+.approach p.stmt{max-width:860px;margin-left:auto;margin-right:auto}
+.steps{display:grid;grid-template-columns:1fr 1.55fr 1fr 1fr;gap:14px;text-align:left;margin-top:44px}
+.step{background:var(--paper-2);border-radius:22px;padding:24px 22px}
+.step .n{display:inline-block;font-weight:700;text-transform:uppercase;letter-spacing:.09em;font-size:.7rem;color:var(--blue);background:color-mix(in srgb,var(--blue) 13%,transparent);padding:5px 11px;border-radius:var(--pill)}
+.step b{font-family:var(--display);font-weight:600;font-size:1.22rem;line-height:1.15;display:block;margin:14px 0 6px}
+.step span.d{font-size:.92rem;color:var(--muted);line-height:1.5;display:block}
+.step.key{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;box-shadow:var(--shadow)}
+.step.key .n{color:var(--blue-hi);background:rgba(111,178,236,.16)}
+.step.key b{font-size:1.5rem}
+.step.key span.d{color:#CDC7BC}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -403,8 +419,6 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
     <a href="https://buy.stripe.com/5kQfZh7EW2ey0Sk8R1a7C02"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Pay an Invoice</a>
     <span class="sep">·</span>
     <a href="https://portal.survivingtheemergency.com/login"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Client Login</a>
-    <span class="sep">·</span>
-    <a href="instructor-portal.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Instructor Login</a>
   </div>
 </div>
 
@@ -417,10 +431,10 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#plans">Plans</a>
+      <a href="#portal">Client Portal</a>
       <a href="#why">Why Us</a>
       <a href="about.html">About</a>
-      <a href="#clients">Clients</a>
-      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
       <a href="#cta" class="btn btn-blue">Request a Quote</a>
@@ -432,8 +446,8 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
 <section class="hero" style="padding:0">
   <div class="wrap hero-in">
     <span class="eyebrow reveal">Onsite · Greater Cincinnati &amp; surrounding counties · OSHA-Focused</span>
-    <h1 class="reveal">Workplace safety training led by <span class="em">real emergency professionals</span></h1>
-    <p class="sub reveal">Hands-on, onsite training and emergency planning that prepares your team to respond in the minutes before EMS arrives — built for real workplaces, not a classroom checklist.</p>
+    <h1 class="reveal">Training for the minutes <span class="em">before EMS arrives</span></h1>
+    <p class="sub reveal">Hands-on workplace safety training and emergency planning, taught at your facility by active fire and EMS professionals. Built for real workplaces, not a classroom checklist.</p>
     <div class="hero-btns reveal">
       <a href="#cta" class="btn btn-blue">Request a Quote</a>
       <a href="#services" class="btn btn-ghost" style="color:#fff">See Services</a>
@@ -454,6 +468,12 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
   <div class="approach-in">
     <span class="eyebrow">Our Approach</span>
     <p class="stmt">We get your team ready to handle the emergency until fire and EMS arrive and take over — and we prepare you for a clean <em>handoff</em>, so the person who had the emergency gets the best possible outcome.</p>
+    <div class="steps">
+      <div class="step"><span class="n">Step 1</span><b>It happens</b><span class="d">A cardiac arrest at a desk. A fire in a break room. An injury on the floor.</span></div>
+      <div class="step key"><span class="n">Step 2 · This is what we train</span><b>Your team is the only help in the room</b><span class="d">The people already there make the difference. We get them ready to act with confidence.</span></div>
+      <div class="step"><span class="n">Step 3</span><b>Fire &amp; EMS arrive</b><span class="d">Responders take over from a team that already started the right care.</span></div>
+      <div class="step"><span class="n">Step 4</span><b>Clean handoff</b><span class="d">The best possible outcome for the person who had the emergency.</span></div>
+    </div>
     <p class="sub2">And we help you meet the requirements that come with it — your own compliance obligations and any third-party or client mandates — so your training checks the box and holds up when it's reviewed.</p>
   </div>
 </section>
@@ -843,7 +863,7 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Surviving the Emergency LLC. All rights reserved.</span>
-      <span>Training &amp; emergency planning</span>
+      <span><a href="https://portal.survivingtheemergency.com/login">Client Login</a> · <a href="instructor-portal.html" target="_blank" rel="noopener">Instructor Login</a></span>
     </div>
   </div>
 </footer>
