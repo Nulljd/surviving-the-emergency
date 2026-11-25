@@ -356,6 +356,9 @@ footer .mono-pulse path{stroke:var(--blue-hi)}
 .partner-name{color:#5C6773;font-size:.98rem;font-weight:600}
 .partner-logo.metanoia-logo{max-height:88px}
 .partner-logo.martinsons-logo{max-height:80px}
+.partner-logo.georgesteel-logo{max-height:46px;max-width:220px}
+.partner-fallback{display:none;font-family:var(--display,Georgia,serif);color:#14314C;font-size:1.05rem;font-weight:600}
+.cred-logo.hsi-logo{max-height:64px}
 </style>
 <style>
 .nav-links{gap:26px}
@@ -759,7 +762,7 @@ header.nav.open .nav-toggle .x{display:block}
     </div>
     <div class="creds-row">
       <div class="cred"><span class="cred-name">American Heart Association</span></div>
-      <div class="cred cred-site"><span class="cred-badge">Authorized Training Site</span><span class="cred-name">ASHI — American Safety &amp; Health Institute</span><span class="cred-sub">CPR/AED · First Aid · Bloodborne Pathogens</span></div>
+      <div class="cred cred-site"><span class="cred-badge">Authorized Training Site</span><img src="hsi.png" alt="HSI / ASHI" class="cred-logo hsi-logo" onerror="this.style.display='none'"><span class="cred-name">ASHI — American Safety &amp; Health Institute</span><span class="cred-sub">CPR/AED · First Aid · Bloodborne Pathogens</span></div>
       <div class="cred"><img src="stopthebleed.png" alt="Stop the Bleed" class="cred-logo" onerror="this.style.display='none'"><span class="cred-name">Stop the Bleed</span></div>
     </div>
     <p class="creds-member">Proud member of the <strong>American Society of Safety Professionals</strong> (ASSP)</p>
@@ -775,9 +778,11 @@ header.nav.open .nav-toggle .x{display:block}
       <div class="partner"><img src="apohco.png" class="partner-logo" alt="APOHCO" onerror="this.style.display='none'"><span class="partner-name">Accountable Pediatric Oral Health Care Organization</span></div>
       <div class="partner"><img src="metanoia.png" class="partner-logo metanoia-logo" alt="Metanoia Center" onerror="this.style.display='none'"></div>
       <div class="partner"><img src="martinsons.png" class="partner-logo martinsons-logo" alt="Martin & Sons Contractors, Inc." onerror="this.style.display='none'"></div>
+      <div class="partner"><img src="georgesteel.png" class="partner-logo georgesteel-logo" alt="George Steel Fabricating, Inc." onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="partner-fallback">George Steel Fabricating</span></div>
       <div class="partner" aria-hidden="true"><img src="apohco.png" class="partner-logo" alt="APOHCO" onerror="this.style.display='none'"><span class="partner-name">Accountable Pediatric Oral Health Care Organization</span></div>
       <div class="partner" aria-hidden="true"><img src="metanoia.png" class="partner-logo metanoia-logo" alt="Metanoia Center" onerror="this.style.display='none'"></div>
       <div class="partner" aria-hidden="true"><img src="martinsons.png" class="partner-logo martinsons-logo" alt="Martin & Sons Contractors, Inc." onerror="this.style.display='none'"></div>
+      <div class="partner" aria-hidden="true"><img src="georgesteel.png" class="partner-logo georgesteel-logo" alt="George Steel Fabricating, Inc." onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="partner-fallback">George Steel Fabricating</span></div>
     </div>
   </div>
 </section>
